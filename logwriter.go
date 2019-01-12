@@ -60,7 +60,6 @@ func main() {
 		if _, err = f.WriteString(getLogLine()); err != nil {
 			panic(err)
 		}
-		// <-time.After(time.Second * 1)
-		<-time.After(time.Millisecond * 1)
+		<-time.After(time.Millisecond * 200)
 	}
 }
